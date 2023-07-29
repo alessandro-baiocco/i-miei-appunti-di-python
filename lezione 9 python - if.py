@@ -47,3 +47,18 @@ else:
     
 if not(X < 10):
     print("x non è minore di 10")
+else:
+    print("x è minore di 10")
+    
+    print("Z è maggiore di 10") if Z > 10 else print("Z è minore di 10")
+    
+if X > Y:
+    if Y > Z:
+        print("X è maggiore")
+    else:
+        print("Z è maggiore")
+if Y > X:
+    if X > Z:
+        print("Y è maggiore")
+    else:
+        print ("Z è maggiore")
