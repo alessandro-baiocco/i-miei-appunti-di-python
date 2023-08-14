@@ -98,15 +98,15 @@
 # 🍰 Esercizio 9
 # Chiedere all'utente di inserire una stringa. Stampare solo le consonanti della stringa usando un loop while.
 
-i9 = 0
-str1Ex9 = input()
-splitted = str1Ex9.split()
-floorToReach = len(splitted) - 1
+# i9 = 0
+# str1Ex9 = input()
+# splitted = list(str1Ex9)
+# floorToReach = len(splitted) 
 
-while i9 < floorToReach:
-    if(splitted[i9] == "a", splitted[i9] == "e", splitted[i9] == "i", splitted[i9] == "o", splitted[i9] == "u"):
-        i9 += 1
-    else:
-        print(splitted[i9])
-        i9 += 1
+# while i9 < floorToReach:
+#     if(splitted[i9] == "a" or splitted[i9] == "e" or splitted[i9] == "i" or splitted[i9] == "o" or splitted[i9] == "u"):
+#         i9 += 1
+#     else:
+#         print(splitted[i9])
+#         i9 += 1
 
