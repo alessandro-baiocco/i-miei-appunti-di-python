@@ -1,3 +1,11 @@
+
+#||----------------------------------------------------------------------------------------||
+#||----------------------------------------------------------------------------------------||
+#|| documentazione presa da qui --> https://codegrind.it/esercizi/python/condizionali-if/  ||
+#||----------------------------------------------------------------------------------------||
+#||----------------------------------------------------------------------------------------||
+
+
 # Tracce
 # 🍰 Esercizio 1
 # Scrivere un programma che chiede all'utente di inserire un numero e stampa "Il numero è positivo" se il numero è maggiore di zero, altrimenti stampa "Il numero è negativo".
