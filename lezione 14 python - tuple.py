@@ -14,7 +14,7 @@
 # 12 - metodi count() e index()
 
 prima = ("milano" , "roma" , "napoli")
-seconda = ("pippo" , true , 45)
+seconda = ("pippo" , True , 45)
 terza = ("franco",)
 
 print("--------------------------------type-------------------------------")
@@ -23,4 +23,19 @@ print("--------------------------------len-------------------------------")
 print(len(prima))
 print("--------------------------------list-------------------------------")
 print(list(prima))
+print("--------------------------------accedere-------------------------------")
+print(prima[0:])
+print(prima[0:2])
+if "roma" in prima:
+    print("si c'e")
+print("--------------------------------change-------------------------------")
+y = list(prima)
+y.remove("roma")
+prima = tuple(y)
+print(prima)
+
+(x , y , z) = seconda
+print(x)
+print(y)
+print(z)
 
