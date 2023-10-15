@@ -16,6 +16,7 @@
 prima = ("milano" , "roma" , "napoli")
 seconda = ("pippo" , True , 45)
 terza = ("franco",)
+quarta = ("coso" , "cosa" , "matilde" , "sempronio" , "caio")
 
 print("--------------------------------type-------------------------------")
 print(type(terza))
@@ -33,9 +34,23 @@ y = list(prima)
 y.remove("roma")
 prima = tuple(y)
 print(prima)
-
+print("------------------------spacchetare una tupla------------------------------------------")
 (x , y , z) = seconda
 print(x)
 print(y)
 print(z)
+print("-----------------------------------del---------------------------------------------")
+# del seconda
+# print(seconda)
+(x , y , *z) = quarta
+print(z)
+print("--------------------------------------ciclare------------------------------------")
+for citta in prima:
+    print(citta)
 
+print("-------------------------------unire tuple---------------------------------------------")
+newTuple = prima + seconda
+print(newTuple)
+print("------------------------------count e index-----------------------------")
+print(newTuple.index("pippo"))
+print(newTuple.count(True))
