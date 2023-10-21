@@ -56,9 +56,35 @@ def esercizio_4(arr):
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 5
 # Scrivi una funzione che prende una lista di parole e restituisce una lista contenente la lunghezza di ciascuna parola.
+
+def esercizio_5(strArr):
+    numArr2 = []
+    for str in strArr:
+        numArr2.append(len(str))
+    return numArr2
+
+# print(esercizio_5(parole))
+
+
+    
+
+
+
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 6
 # Scrivi una funzione che prende una lista di numeri e restituisce il valore massimo.
+def esercizio_6(arr):
+    finalNum = 0
+    for n in arr:
+        if n > finalNum:
+            finalNum = n
+    return finalNum
+
+# print(esercizio_6(valori))
+
+
+
+
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 7
 # Scrivi una funzione che prende una lista di parole e restituisce la parola più lunga.
