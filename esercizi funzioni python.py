@@ -88,9 +88,30 @@ def esercizio_6(arr):
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 7
 # Scrivi una funzione che prende una lista di parole e restituisce la parola più lunga.
+
+def esercizio_7(strArr):
+    finalstr = ""
+    for str in strArr:
+        if len(str) > len(strArr):
+            finalstr = str
+    return finalstr
+
+# print(esercizio_7(parole))
+
+
+
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 8
 # Scrivi una funzione che prende una lista di numeri e restituisce la media dei numeri.
+
+def esercizio_8(arr):
+    media = 0
+    for n in arr:
+        media += n
+    return media / len(arr)
+    
+print(esercizio_8(valori))
+
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 9
 # Scrivi una funzione che prende una lista di parole e restituisce una lista contenente solo le parole palindrome.
