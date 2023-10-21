@@ -26,9 +26,33 @@ def esercizio_2(str):
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 3
 # Scrivi una funzione che prende una lista di parole e restituisce una lista contenente solo le parole che iniziano con una lettera specificata.
+parole = ["cosa" , "franco" , "tizio" , "citta" , "citofono"]
+def esercizio_3(strArr , letter):
+    finalArr = []
+    for str in strArr:
+        if(str[0] == letter):
+            finalArr.append(str)
+    return finalArr
+            
+# print(esercizio_3(parole , "c"))       
+
+
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 4
 # Scrivi una funzione che prende una lista di numeri e restituisce una lista contenente solo i numeri pari.
+
+def esercizio_4(arr):
+    finalArr2 = []
+    for n in arr:
+        if(n % 2 == 0):
+            finalArr2.append(n)
+    return finalArr2
+
+# print(esercizio_4(valori))
+         
+
+
+
 print("-------------------------------------------------------------------------------")
 # 🍰 Esercizio 5
 # Scrivi una funzione che prende una lista di parole e restituisce una lista contenente la lunghezza di ciascuna parola.
