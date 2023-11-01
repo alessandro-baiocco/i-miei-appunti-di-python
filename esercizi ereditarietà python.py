@@ -1,3 +1,5 @@
+import math
+
 # 🍰 Esercizio 1
 # Scrivere una classe Veicolo che abbia le seguenti proprietà: marca, modello e anno. 
 # Aggiungi poi i metodi accellera e frena. 
@@ -68,4 +70,45 @@ macchina2.__str__()
 
 print("-------------------------------------------------------------------")
 # 🍰 Esercizio 3
-# Scrivi una classe Forma che abbia un metodo area() che calcoli l’area della forma. Poi crea le classi Quadrato e Cerchio che ereditino dalla classe Forma e che implementino il metodo area() in modo appropriato per ogni forma. Utilizza le classi create per creare un quadrato e un cerchio, quindi stampa l’area di ognuno di essi.
+# Scrivi una classe Forma che abbia un metodo area() che calcoli l’area della forma. 
+# Poi crea le classi Quadrato e Cerchio che ereditino dalla classe Forma e che implementino il metodo area() 
+# in modo appropriato per ogni forma. 
+# Utilizza le classi create per creare un quadrato e un cerchio, quindi stampa l’area di ognuno di essi.
+
+
+
+pGreco = math.pi
+print(pGreco)
+class Forma:
+    def __init__(self , lunghezza , altezza):
+        self.lunghezza = lunghezza
+        self.altezza = altezza
+    def area(self):
+        print("l'area è : " , self.lunghezza * self.altezza / 2)
+        
+
+
+
+class Cerchio(Forma):
+    def __init__(self , raggio):
+        self.raggio = raggio
+    def area(self):
+        print("l'area è " , math.pow(self.raggio , 2) * pGreco)
+        
+cerchio1 = Cerchio(30)
+cerchio1.area()
+
+class Quadrato(Forma):
+    def __init__(self , lunghezza , altezza):
+        super().__init__(lunghezza , altezza)
+    def area(self):
+        print("l'area è : " , self.lunghezza * self.altezza)
+        
+quadrato = Quadrato(20 , 20)
+
+quadrato.area()
+        
+
+
+
+
