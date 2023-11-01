@@ -20,7 +20,8 @@ class Veicolo:
         else:
             self.velocità - n
             print("sto rallentando di " , n)
-            
+    def __str__(self):
+        print("marca : " + self.marca + ", modello : " + self.modello + ", anno : " , self.anno)
             
 class Macchina(Veicolo):
     def __init__(self , marca , modello , anno , colore):
@@ -29,6 +30,7 @@ class Macchina(Veicolo):
     def cambia_colore(self, str):
         self.colore = str
         print("ho cambiato colore in " + str)
+
             
 
 macchina1 = Macchina("audi" , "boh" , 1990 , "rossa")   
@@ -38,13 +40,32 @@ macchina1.rallenta(20)
 print(macchina1.velocità)
 macchina1.cambia_colore("blu") 
 print(macchina1.colore)
+
         
 
 
 
 print("-------------------------------------------------------------------")
 # 🍰 Esercizio 2
-# Modifica la classe Auto in modo che erediti anche il metodo __str__() dalla classe Veicolo, in modo da stampare le informazioni sull’auto in questo formato: “Marca: Ferrari, Modello: Enzo, Anno: 2004, Colore: Rosso”.
+# Modifica la classe Auto in modo che erediti anche il metodo __str__() 
+# dalla classe Veicolo, in modo da stampare le informazioni sull’auto in questo formato: 
+# “Marca: Ferrari, Modello: Enzo, Anno: 2004, Colore: Rosso”.
+class Macchina2(Veicolo):
+    def __init__(self , marca , modello , anno , colore):
+        super().__init__(marca , modello , anno)
+        self.colore = colore
+    def cambia_colore(self, str):
+        self.colore = str
+        print("ho cambiato colore in " + str)
+    def __str__(self):
+        print("marca : " + self.marca + ", modello : " + self.modello + ", anno : " , self.anno , ", colore : " + self.colore )
+        
+macchina2 = Macchina2("audi" , "boh" , 1990 , "rossa")
+
+macchina2.__str__()
+
+
+
 print("-------------------------------------------------------------------")
 # 🍰 Esercizio 3
 # Scrivi una classe Forma che abbia un metodo area() che calcoli l’area della forma. Poi crea le classi Quadrato e Cerchio che ereditino dalla classe Forma e che implementino il metodo area() in modo appropriato per ogni forma. Utilizza le classi create per creare un quadrato e un cerchio, quindi stampa l’area di ognuno di essi.
