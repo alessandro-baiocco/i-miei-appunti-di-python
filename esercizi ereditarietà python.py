@@ -3,7 +3,7 @@
 # Aggiungi poi i metodi accellera e frena. 
 # Creare poi una classe Auto che eredita da Veicolo ma aggiunge la proprietà colore ed il metodo cambia_colore().
 class Veicolo:
-    def __init__(marca , modello , anno):
+    def __init__(self ,marca , modello , anno):
         self.marca = marca
         self.modello = modello
         self.anno = anno
@@ -21,8 +21,23 @@ class Veicolo:
             self.velocità - n
             print("sto rallentando di " , n)
             
-    
-        
+            
+class Macchina(Veicolo):
+    def __init__(self , marca , modello , anno , colore):
+        super().__init__(marca , modello , anno)
+        self.colore = colore
+    def cambia_colore(self, str):
+        self.colore = str
+        print("ho cambiato colore in " + str)
+            
+
+macchina1 = Macchina("audi" , "boh" , 1990 , "rossa")   
+macchina1.accelera(40)  
+print(macchina1.velocità)
+macchina1.rallenta(20) 
+print(macchina1.velocità)
+macchina1.cambia_colore("blu") 
+print(macchina1.colore)
         
 
 
