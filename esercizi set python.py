@@ -1,18 +1,14 @@
 
-import math
 #||------------------------------------------------------------------------------------||
 #||------------------------------------------------------------------------------------||
 #|| documentazione presa da qui --> https://codegrind.it/esercizi/python/set           ||
 #||------------------------------------------------------------------------------------||
 #||------------------------------------------------------------------------------------||
 
-# seconda = {"pippo" , True , 45}
-# terza = {"franco" ,}
-# quarta = {"coso" , "cosa" , "matilde" , "sempronio" , "caio" , "roma"}
 
 # 🍰 Esercizio 1
 # Creare un set vuoto e assegnarlo a una variabile.
-emptySet = {}
+emptySet = set()
 print(emptySet)
 
 
@@ -64,7 +60,7 @@ print(numberset)
 print("-----------------------------------------------------------------------------")
 # 🍰 Esercizio 8 (difficile)
 # Creare un nuovo set contenente i numeri pari del set precedente.
-numberset2 = {1,}
+numberset2 = set()
 for num in numberset:
     if num % 2 != 0:
         numberset2.add(num)
