@@ -54,12 +54,46 @@ print(os.getcwd())
 print("-------------------------------------------------------------------------------------------")
 # Esercizio 6
 # Importa il modulo datetime e stampa la data e l'ora corrente.
+import datetime
+
+now = datetime.datetime.now()
+print(now)
+
+
 print("-------------------------------------------------------------------------------------------")
 # Esercizio 7
-# Crea un nuovo file Python chiamato esempio_pacchetto.py e mettilo in una cartella chiamata mio_pacchetto. All'interno di esempio_pacchetto.py, importa il modulo mio_modulo dal primo esercizio e usa la funzione somma. Poi importa il pacchetto nel tuo programma principale e usa la funzione somma.
+# Crea un nuovo file Python chiamato esempio_pacchetto.py e mettilo in una cartella chiamata mio_pacchetto. 
+# All'interno di esempio_pacchetto.py, importa il modulo mio_modulo dal primo esercizio e usa la funzione somma.
+# Poi importa il pacchetto nel tuo programma principale e usa la funzione somma.
+import mio_pacchetto.esempio_pacchetto as mypack
+print(mypack.mio_modulo.somma(8 , 9))
+
+
 print("-------------------------------------------------------------------------------------------")
 # Esercizio 8
-# Importa il modulo csv e apri il file dati.csv che contiene una tabella di dati separati da virgola. Poi leggi il contenuto del file e stampalo.
+# Importa il modulo csv e apri il file dati.csv 
+# che contiene una tabella di dati separati da virgola. Poi leggi il contenuto del file e stampalo.
+
+# import csv 
+
+# with open('dati.csv', 'r') as file:
+#     lettore = csv.reader(file)
+#     for riga in lettore:
+#         print(riga)
+
+
+
+
 print("-------------------------------------------------------------------------------------------")
 # Esercizio 9
-# Importa il modulo json e crea un dizionario con alcune chiavi e valori. Poi serializza il dizionario in formato JSON e stampalo.
+# Importa il modulo json e crea un dizionario con alcune chiavi e valori. 
+# Poi serializza il dizionario in formato JSON e stampalo.
+
+import json as js
+
+myDict = {"nome" : "franco" , "cognome" : "rossi" , "eta" : 21}
+myJson = js.dumps(myDict)
+
+print(myJson)
+
+
