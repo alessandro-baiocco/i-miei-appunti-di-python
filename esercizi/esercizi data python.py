@@ -47,9 +47,33 @@ print(data4 + datetime.timedelta(days= numeroDiGiorni))
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 5
 # Scrivi un programma che stampa tutti i giorni di un determinato mese e anno.
+
+import calendar
+
+anno = int(input("Inserisci l'anno: "))
+mese = int(input("Inserisci il mese (1-12): "))
+
+cal = calendar.monthcalendar(anno, mese)
+for settimana in cal:
+    for giorno in settimana:
+        if giorno != 0:
+            print(giorno)
+
+
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 6
 # Scrivi un programma che prende in input una data in formato "gg/mm/aaaa" e verifica se l'anno è bisestile o meno.
+
+data5 = input("Inserisci una data (gg/mm/aaaa): ")
+data5 = datetime.datetime.strptime(data5, "%d/%m/%Y")
+
+
+if calendar.isleap(data5.year):
+    print("l'anno è bisestile")
+else:
+    print("l'anno non è bisestile")
+
+
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 7
 # Scrivi un programma che prende in input due date e stampa tutte le date comprese tra le due (inclusi i bordi).
