@@ -85,9 +85,9 @@ data7 = datetime.datetime.strptime(data7, "%d/%m/%Y")
 
 delta = datetime.timedelta(days=1)
 
-while data1 <= data2:
-    print(data1.strftime("%d/%m/%Y"))
-    data1 += delta
+while data6 <= data7:
+    print(data6.strftime("%d/%m/%Y"))
+    data6 += delta
 
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 8
