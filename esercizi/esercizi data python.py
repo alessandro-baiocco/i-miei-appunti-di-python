@@ -77,6 +77,18 @@ else:
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 7
 # Scrivi un programma che prende in input due date e stampa tutte le date comprese tra le due (inclusi i bordi).
+
+data6 = input("Inserisci una data (gg/mm/aaaa): ")
+data6 = datetime.datetime.strptime(data6, "%d/%m/%Y")
+data7 = input("Inserisci una data (gg/mm/aaaa): ")
+data7 = datetime.datetime.strptime(data7, "%d/%m/%Y")
+
+delta = datetime.timedelta(days=1)
+
+while data1 <= data2:
+    print(data1.strftime("%d/%m/%Y"))
+    data1 += delta
+
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 8
 # Scrivi una funzione che prenda in input due date come oggetti datetime e restituisca il numero di giorni trascorsi tra di esse.
