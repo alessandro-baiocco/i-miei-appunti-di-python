@@ -92,10 +92,42 @@ while data6 <= data7:
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 8
 # Scrivi una funzione che prenda in input due date come oggetti datetime e restituisca il numero di giorni trascorsi tra di esse.
+
+data8 = input("Inserisci una data (gg/mm/aaaa): ")
+data8 = datetime.datetime.strptime(data8, "%d/%m/%Y")
+data9 = input("Inserisci una data (gg/mm/aaaa): ")
+data9 = datetime.datetime.strptime(data9, "%d/%m/%Y")
+
+delta2 = datetime.timedelta(days=1)
+numeroDiGiorni = 0
+
+while data8 <= data9:
+    numeroDiGiorni += 1
+    data8 += delta2
+print(numeroDiGiorni)
+
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 9
 # Scrivi una funzione che prenda in input una data come oggetto datetime e restituisca il giorno della settimana corrispondente come stringa.
+
+data10 = input("Inserisci una data (gg/mm/aaaa): ")
+data10 = datetime.datetime.strptime(data10, "%d/%m/%Y")
+
+giornoDellaSettimana = data10.strftime("%A")
+
+print(giornoDellaSettimana)
+
+
 print("------------------------------------------------------------------------------------------------------------")
 # 🍰 Esercizio 10
 # Scrivi una funzione che prenda in input una data come oggetto datetime e restituisca il numero della settimana corrispondente nell'anno.
+
+data11 = input("Inserisci una data (gg/mm/aaaa): ")
+data11 = datetime.datetime.strptime(data11, "%d/%m/%Y")
+
+numeroDellaSettimana = data11.strftime("%W")
+
+print(numeroDellaSettimana)
+
+
 print("------------------------------------------------------------------------------------------------------------")
