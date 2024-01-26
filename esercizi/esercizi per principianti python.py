@@ -11,19 +11,19 @@
 # Scrivi un programma che chieda due numeri all'utente tramite la funzione input e mostri il più grande tra i due utilizzando la funzione print.
 # Per quanto Python disponga di una funzione max(), siete invitati ad utilizzare le istruzioni istruzioni if, elif ed else per la scrittura dell'algoritmo.
 
-try:
-    print("inserisci 2 valori")
-    num1Exe1 = int(input())
-    num2Exe1 = int(input())
+# try:
+#     print("inserisci 2 valori")
+#     num1Exe1 = int(input())
+#     num2Exe1 = int(input())
     
-    def numeroMaggiore(int1 , int2):
-        if int1 > int2:
-            print(int1)
-        else:
-            print(int2)
-    numeroMaggiore(num1Exe1 , num2Exe1)
-except:
-    print("puoi inserire solo numeri interi")
+#     def numeroMaggiore(int1 , int2):
+#         if int1 > int2:
+#             print(int1)
+#         else:
+#             print(int2)
+#     numeroMaggiore(num1Exe1 , num2Exe1)
+# except:
+#     print("puoi inserire solo numeri interi")
     
 
 
@@ -32,17 +32,17 @@ print("-------------------------------------------------------------------------
 # 🍰 Esercizio 2
 # Scrivi un programma che chieda tre numeri a, b, c all'utente e mostri il più grande tra loro.
 
-try:
+# try:
     
-    print("inserisci 3 valori")
-    num1Exe2 = int(input())
-    num2Exe2 = int(input())
-    num3Exe2 = int(input())
+#     print("inserisci 3 valori")
+#     num1Exe2 = int(input())
+#     num2Exe2 = int(input())
+#     num3Exe2 = int(input())
     
-    print(max(num1Exe2 , num2Exe2 , num3Exe2))
+#     print(max(num1Exe2 , num2Exe2 , num3Exe2))
         
-except:
-    print("puoi inserire solo numeri interi")
+# except:
+#     print("puoi inserire solo numeri interi")
 
 
 
@@ -54,23 +54,23 @@ print("-------------------------------------------------------------------------
 
 userValuesExe3 = []
 
-try:
-    print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
-    while True:
-        newValueExe3 = int(input())
-        if newValueExe3 == 0:
-            break
-        else:
-            userValuesExe3.append(newValueExe3)
-except:
-    print("puoi inserire solo numeri")
+# try:
+#     print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
+#     while True:
+#         newValueExe3 = int(input())
+#         if newValueExe3 == 0:
+#             break
+#         else:
+#             userValuesExe3.append(newValueExe3)
+# except:
+#     print("puoi inserire solo numeri")
     
-higherValue = 0
-for num in userValuesExe3:
-    if num > higherValue:
-        higherValue = num
+# higherValue = 0
+# for num in userValuesExe3:
+#     if num > higherValue:
+#         higherValue = num
 
-print("il numero più grande è", higherValue)
+# print("il numero più grande è", higherValue)
     
     
 
@@ -81,12 +81,12 @@ print("-------------------------------------------------------------------------
 
 vocali = ["a" , "e" , "i" , "o" , "u"]
 
-print("inserisci una lettera se inserisci una parola verrà presa la prima lettera")
-str1Exe4 = input()
-if str1Exe4[0] in vocali:
-    print("si, è una vocale")
-else:
-    print("no, non è una vocale")
+# print("inserisci una lettera se inserisci una parola verrà presa la prima lettera")
+# str1Exe4 = input()
+# if str1Exe4[0] in vocali:
+#     print("si, è una vocale")
+# else:
+#     print("no, non è una vocale")
 
 
 
@@ -99,22 +99,22 @@ print("-------------------------------------------------------------------------
 
 userValuesExe5 = []
 
-try:
-    print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
-    while True:
-        newValueExe5 = int(input())
-        if newValueExe5 == 0:
-            break
-        else:
-            userValuesExe5.append(newValueExe5)
-except:
-    print("puoi inserire solo numeri")
+# try:
+#     print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
+#     while True:
+#         newValueExe5 = int(input())
+#         if newValueExe5 == 0:
+#             break
+#         else:
+#             userValuesExe5.append(newValueExe5)
+# except:
+#     print("puoi inserire solo numeri")
     
-totalValueExe5 = 0
-for num in userValuesExe5:
-    totalValueExe5 += num
+# totalValueExe5 = 0
+# for num in userValuesExe5:
+#     totalValueExe5 += num
 
-print("il totale è ", totalValueExe5)
+# print("il totale è ", totalValueExe5)
 
 
 print("---------------------------------------------------------------------------")
@@ -122,22 +122,22 @@ print("-------------------------------------------------------------------------
 # Scrivi un programma "moltiplicatore" che, data una lista di numeri, moltiplichi tra loro tutti gli elementi.
 userValuesExe6 = []
 
-try:
-    print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
-    while True:
-        newValueExe6 = int(input())
-        if newValueExe6 == 0:
-            break
-        else:
-            userValuesExe6.append(newValueExe6)
-except:
-    print("puoi inserire solo numeri")
+# try:
+#     print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
+#     while True:
+#         newValueExe6 = int(input())
+#         if newValueExe6 == 0:
+#             break
+#         else:
+#             userValuesExe6.append(newValueExe6)
+# except:
+#     print("puoi inserire solo numeri")
     
-totalValueExe6 = 1
-for num in userValuesExe6:
-    totalValueExe6 *= num
+# totalValueExe6 = 1
+# for num in userValuesExe6:
+#     totalValueExe6 *= num
     
-print("il totale è ", totalValueExe6)
+# print("il totale è ", totalValueExe6)
 
 
 
@@ -146,6 +146,18 @@ print("-------------------------------------------------------------------------
 # 🍰 Esercizio 7
 # Scrivi un programma che a partire da un elemento e una lista di elementi dica in output se l'elemento passato sia presente o meno nella lista.
 # Qualora l'elemento sia presente nella lista, il programma dovrà comunicarci l'indice dell'elemento tramite il metodo index.
+  
+# try:
+#     val1Exe7 = int(input()) 
+#     valuesExe7 = [8 , 6 , 2512 , 1 , 3 , 42 , 51 , 54367 , 24]
+
+#     for x, val in enumerate(valuesExe7):
+#         if val == val1Exe7:
+#             print(val , "è presente in posizione" , x)
+# except:
+#     print("puoi inserire solo numeri interi")
+
+
     
 
 print("---------------------------------------------------------------------------")
@@ -157,13 +169,44 @@ print("-------------------------------------------------------------------------
 # *********
 # *****
 
+intValuesExe8 = [4 , 3 , 7 , 4]
+strExe8 = ""
+for n in intValuesExe8:
+    for x in range(n):
+        strExe8 += "*"
+    print(strExe8)
+    strExe8 = ""
+
+        
+
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 9
-# Scrivi una funzione che restituisca la lunghezza di una stringa o lista passata come parametro. In sostanza, seppur presente, provate a scrivere la nostra versione della funzione len!
+# Scrivi una funzione che restituisca la lunghezza di una stringa o lista passata come parametro. 
+# In sostanza, seppur presente, provate a scrivere la nostra versione della funzione len!
+
+# str1Exe9 = input()
+# strLengthExe4 = 0
+
+# for letter in str1Exe4:
+#     strLengthExe4 += 1
+    
+# print(strLengthExe4)
+    
+
+
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 10
-# Scrivi una funzione che data in ingresso una lista A contenente n parole, restituisca in output una lista B di interi che rappresentano la lunghezza delle parole contenute in A.
+# Scrivi una funzione che data in ingresso una lista A contenente n parole, 
+# restituisca in output una lista B di interi che rappresentano la lunghezza delle parole contenute in A.
 # Questo esercizio può essere risolto anche usando una list comprehension.
+
+wordsExe10 = ["ciao" , "franco" , "coso" , "mario" , "genoveffa"]
+wordsLenExe10 = []
+
+for word in wordsExe10:
+    wordsLenExe10.append(len(word))
+    
+print(wordsLenExe10)
     
 
 print("---------------------------------------------------------------------------")
@@ -171,14 +214,56 @@ print("-------------------------------------------------------------------------
 # Scrivi una funzione che, data una stringa come parametro, restituisca un dizionario rappresentante la "frequenza di comparsa" di ciascun carattere componente la stringa.
 # Per fare un esempio, data una stringa "ababcc", otterremo in risultato {"a": 2, "b": 2, "c": 2}
 
+# str1Exe11 = input()
+# dict1Exe11 = {}
+
+# for letter in str1Exe11:
+#     if letter in dict1Exe11:
+#         dict1Exe11[letter] += 1
+#     else:
+#         dict1Exe11[letter] = 1
+
+# print(dict1Exe11)
+    
+
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 12
-# Scrivi una funzione che, dato in ingresso un valore espresso in metri, mandi in print l'equivalente in miglia terrestri, iarde, piedi e pollici. Come risolverai questo esercizio?
+# Scrivi una funzione che, dato in ingresso un valore espresso in metri, 
+# mandi in print l'equivalente in miglia terrestri, iarde, piedi e pollici. Come risolverai questo esercizio?
+
+# try:
+#     print("inserire un valore in metri")
+#     num1Exe12 = int(input())
+#     print(num1Exe12, "metri equivale a :" , num1Exe12 / 1609 ,"miglia terrestri")
+#     print(num1Exe12, "metri equivale a :" , num1Exe12 * 1.094 ,"iarde")
+#     print(num1Exe12, "metri equivale a :" , num1Exe12 * 3.281 ,"piedi")
+#     print(num1Exe12, "metri equivale a :" , num1Exe12 * 39,37 ,"miglia terrestri")
+# except:
+#     print("puoi inserire solo numeri interi")
+
+
 
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 13
 # Scrivi una semplice funzione che converta un dato numero di giorni, ore e minuti, passati dall'utente tramite funzione input, in secondi.
+
+# try: 
+#     print("inserire numero giorni")
+#     daysExe13 = int(input())
+#     print("inserire numero di ore")
+#     hoursExe13 = int(input())
+#     print("inserire numero minuti")
+#     minutsExe13 = int(input())
+    
+#     totalSecondExe13 = 0
+#     totalSecondExe13 += (daysExe13 * 86400)
+#     totalSecondExe13 += (hoursExe13 * 3600)
+#     totalSecondExe13 += (minutsExe13 * 60)
+#     print("numero totale di secondi :",totalSecondExe13)
+    
+# except:
+#     print("puoi inserire solo numeri interi")
     
 
 print("---------------------------------------------------------------------------")
@@ -190,6 +275,12 @@ print("-------------------------------------------------------------------------
 # un rettangolo
 # un triangolo
 # Sentitevi liberi di estendere le potenzialità della funzione quanto meglio credete!
+
+
+
+
+
+
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 15
