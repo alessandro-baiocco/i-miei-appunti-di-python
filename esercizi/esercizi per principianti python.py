@@ -277,16 +277,62 @@ print("-------------------------------------------------------------------------
 # Sentitevi liberi di estendere le potenzialità della funzione quanto meglio credete!
 
 
-
+import math 
+try:
+    print("inserire tipo di forma 1 per il cerchio |2 per triangolo | 3 per quadrato | 4 per rettangolo")
+    typeForm = input()
+    if typeForm == "1":
+        print("inserire raggio ")
+        baseForm = int(input())
+    elif typeForm == "2" or typeForm == "3" or typeForm == "4":
+        print("inserire base")
+        baseForm = int(input())
+        print("inserire altezza")
+        heightForm = int(input())
+        
+    if typeForm == "1":
+        print("l'area del cerchio è :", math.pi * pow(baseForm , 2))  
+    elif typeForm == "2":
+        print("l'area del triangolo è :", baseForm * heightForm / 2)    
+    elif typeForm == "3" or typeForm == "4":
+        print("l'area è :", baseForm * heightForm) 
+    else:
+        print("forma non trovata")   
+        
+    
+except:
+    print("hai inserito un valore non valido")
 
 
 
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 15
-# Un indirizzo MAC (Media Access Control address) è un indirizzo univoco associato dal produttore, a un chipset per comunicazioni wireless (es WiFi o Bluetooth), composto da 6 coppie di cifre esadecimali separate da due punti.
+# Un indirizzo MAC (Media Access Control address) è un indirizzo univoco associato dal produttore, a un chipset per comunicazioni wireless (es WiFi o Bluetooth),
+# composto da 6 coppie di cifre esadecimali separate da due punti.
 # Un esempio di MAC è 02:FF:A5:F2:55:12.
 # Scrivi una funzione genera_mac() che generi degli indirizzi MAC pseudo casuali utilizzando il modulo random.
+from random import randint
+macAdressChar = ["0" , "1" , "2" , "3" , "4", "5", "6", "7", "8", "9", "A" , "B" , "C" , "D" , "E" , "F"]
+
+
+def genera_mac():
+    macAdress = ""
+    for num in range(12):
+        randomValue = randint(0 , 15)
+        macAdress += macAdressChar[randomValue]
+        if (num + 1) %2  == 0 and num != 11:
+            macAdress += ":"
+    return macAdress
+   
+   
+   
+print(genera_mac())
+        
+    
+    
+
+
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 16
 # Scrivi una funzione che fornisca in output il nome del Sistema Operativo utilizzato con eventuali relative informazioni sulla release corrente.
