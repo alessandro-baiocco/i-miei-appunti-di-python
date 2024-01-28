@@ -278,30 +278,30 @@ print("-------------------------------------------------------------------------
 
 
 import math 
-try:
-    print("inserire tipo di forma 1 per il cerchio |2 per triangolo | 3 per quadrato | 4 per rettangolo")
-    typeForm = input()
-    if typeForm == "1":
-        print("inserire raggio ")
-        baseForm = int(input())
-    elif typeForm == "2" or typeForm == "3" or typeForm == "4":
-        print("inserire base")
-        baseForm = int(input())
-        print("inserire altezza")
-        heightForm = int(input())
+# try:
+#     print("inserire tipo di forma 1 per il cerchio |2 per triangolo | 3 per quadrato | 4 per rettangolo")
+#     typeForm = input()
+#     if typeForm == "1":
+#         print("inserire raggio ")
+#         baseForm = int(input())
+#     elif typeForm == "2" or typeForm == "3" or typeForm == "4":
+#         print("inserire base")
+#         baseForm = int(input())
+#         print("inserire altezza")
+#         heightForm = int(input())
         
-    if typeForm == "1":
-        print("l'area del cerchio è :", math.pi * pow(baseForm , 2))  
-    elif typeForm == "2":
-        print("l'area del triangolo è :", baseForm * heightForm / 2)    
-    elif typeForm == "3" or typeForm == "4":
-        print("l'area è :", baseForm * heightForm) 
-    else:
-        print("forma non trovata")   
+#     if typeForm == "1":
+#         print("l'area del cerchio è :", math.pi * pow(baseForm , 2))  
+#     elif typeForm == "2":
+#         print("l'area del triangolo è :", baseForm * heightForm / 2)    
+#     elif typeForm == "3" or typeForm == "4":
+#         print("l'area è :", baseForm * heightForm) 
+#     else:
+#         print("forma non trovata")   
         
     
-except:
-    print("hai inserito un valore non valido")
+# except:
+#     print("hai inserito un valore non valido")
 
 
 
@@ -337,21 +337,66 @@ print("-------------------------------------------------------------------------
 # 🍰 Esercizio 16
 # Scrivi una funzione che fornisca in output il nome del Sistema Operativo utilizzato con eventuali relative informazioni sulla release corrente.
 # Suggerimento: per risolvere questo esercizio potreste dover utilizzare una libreria! ;)
+
+import os 
+import platform
+
+def ilMioSO():
+    print(os.name)
+    print(platform.system())
+    print(platform.release())
     
+    
+ilMioSO()
+    
+
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 17
 # Scrivi una funzione che, dato un carattere in ingresso, restituisca in output il codice ASCII associato al carattere passato.
 # Anche in questo caso, usare una libreria potrebbe facilitare la risoluzione dell'esercizio!
 
+# charExe17 = input("inserire un carattere:")
+
+# def foundASCII(str):
+#     asciiCode = ord(str[0])
+#     return asciiCode
+
+# print(foundASCII(charExe17))
+
+
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 18
-# Un numero perfetto è un numero naturale uguale alla somma dei suoi divisori positivi, escluso sé stesso. Scrivi una funzione che verifichi se un numero è perfetto oppure no.
+# Un numero perfetto è un numero naturale uguale alla somma dei suoi divisori positivi, 
+# escluso sé stesso. Scrivi una funzione che verifichi se un numero è perfetto oppure no.
+
+# num1Exe18=int(input("Enter the number: "))  
+# sumExe18=0  
+# for i in range(1,num1Exe18):  
+#     if (num1Exe18%i==0):  
+#         sumExe18=sumExe18+i  
+# if(sumExe18==num1Exe18):  
+#     print("il numero inserito è perfetto")  
+# else:  
+#     print("il numero inserito non è perfetto")  
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 19
-# Scrivi una funzione che aggiunga ad una lista 10 colori inseriti dall'utente. Il programma deve poi chiedere all'utente di inserire una lettera e mostrare in output solo i colori nella lista che iniziano con quella lettera.
+# Scrivi una funzione che aggiunga ad una lista 10 colori inseriti dall'utente. 
+# Il programma deve poi chiedere all'utente di inserire una lettera e mostrare in output solo i colori nella lista che iniziano con quella lettera.
 # Suggerimento: potresti usare la funzione range e il metodo startswith().
+
+# colorListExe19 = []
+
+# for i in range(0,11): 
+#     if i >= 10:
+#         charExe19 = input("inserisci una lettera:")
+#         for color in colorListExe19:
+#             if color.startswith(charExe19[0]):
+#                 print(color)
+#         break
+#     colorListExe19.append(input('inserisci il colore numero ' + str(i + 1)))
+     
     
 
 print("---------------------------------------------------------------------------")
@@ -360,13 +405,88 @@ print("-------------------------------------------------------------------------
 # un ciclo while e li stampi con la funzione print senza andare a capo. 
 # Il ciclo while si deve interrompere quando l'utente preme INVIO senza scrivere nulla.
 
+# str1Exe20 = ""
+
+# while True:
+#     inputExe20 = input("inserire qualcosa")
+#     if inputExe20 == "":
+#         break
+#     str1Exe20 += inputExe20
+
+# print(str1Exe20)
+
+
+
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 21
-# Scrivi una funzione che accetti una lista di dizionari rappresentante una scuola. Ogni dizionario rappresenta uno studente e contiene nome, cognome, classe e voti. La funzione deve stampare un elenco di tutti gli studenti e calcolare la media dei voti di ciascuno.
+# Scrivi una funzione che accetti una lista di dizionari rappresentante una scuola. 
+# Ogni dizionario rappresenta uno studente e contiene nome, cognome, classe e voti. 
+# La funzione deve stampare un elenco di tutti gli studenti e calcolare la media dei voti di ciascuno.
+
+# dictListExe21 = [
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":2 , "matematica": 7 , "classe" : "A1"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 9, "italiano":6 , "matematica": 9 , "classe" : "B1"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 1, "italiano":2 , "matematica": 7 , "classe" : "B1"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 0, "italiano":2 , "matematica": 2 , "classe" : "B2"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 5, "italiano":2 , "matematica": 1 , "classe" : "B2"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 2, "italiano":1 , "matematica": 7 , "classe" : "A3"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":10 , "matematica": 9 , "classe" : "B3"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 4, "italiano":4 , "matematica": 4 , "classe" : "C1"},
+#     {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":8 , "matematica": 8 , "classe" : "C1"},
+#     ]
+
+
+# def calcolaMediaTutti(arr):
+#     for i in range(0 , len(arr)):
+#         print("nome:", arr[i]["nome"])
+#         print("cognome:",arr[i]["cognome"])
+#         print("classe:",arr[i]["classe"])
+#         totVotiExe21 = arr[i]["storia"] + arr[i]["italiano"] + arr[i]["matematica"]
+#         print("media:", (totVotiExe21/3))
+
+# calcolaMediaTutti(dictListExe21)
+
+
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 22
-# Scrivi un programma che crei un file CSV per memorizzare in un dizionario i dati degli utenti registrati su un sito web. I dati richiesti per ogni utente sono: username, password, email e data di registrazione. Il programma deve permettere di salvare le informazioni nel file, leggere i dati e stamparli a schermo.
+# Scrivi un programma che crei un file CSV per memorizzare in un dizionario i dati degli utenti registrati su un sito web. 
+# I dati richiesti per ogni utente sono: username, password, email e data di registrazione. 
+# Il programma deve permettere di salvare le informazioni nel file, leggere i dati e stamparli a schermo.
+
+
+import csv
+
+def creaFileCsv(dizionario, nome_file):
+    with open(nome_file, 'w', newline='') as file_csv:
+        writer = csv.writer(file_csv)
+        writer.writerow(['username', 'password', 'email', 'data_registrazione'])
+        for utente in dizionario.values():
+            writer.writerow([utente['username'], utente['password'], utente['email'], utente['data di registrazione']])
+
+def leggiFileCsv(nome_file):
+    with open(nome_file, 'r') as file_csv:
+        reader = csv.reader(file_csv)
+        for row in reader:
+            print(row)
+
+
+utenti = {
+    1:{"username":"coso", "password":"1234", "email":"wfafawf@gmail.com" , "data di registrazione":"16/01/1990"}, 
+    2:{"username":"coso1","password": "1234","email": "sfawfwf@gmail.com" ,"data di registrazione":"17/03/1990"}, 
+    3:{"username":"coso3","password": "1234","email": "wutgdfkkyf@gmail.com" ,"data di registrazione":"19/09/1990"}, 
+    4:{"username":"coso2","password": "1234","email": "cxdfbbswf@gmail.com" ,"data di registrazione":"22/02/1993"}, 
+    5:{"username":"coso4","password": "1234","email": "u5kiedrgwf@gmail.com" ,"data di registrazione":"16/05/1999"}, 
+    6:{"username":"coso5","password": "1234","email": "wwqsavawvawf@gmail.com" ,"data di registrazione":"09/10/1991"}, 
+}
+
+
+creaFileCsv(utenti, 'utenti.csv')
+
+leggiFileCsv('utenti.csv')
+
+
+
 
     
 
