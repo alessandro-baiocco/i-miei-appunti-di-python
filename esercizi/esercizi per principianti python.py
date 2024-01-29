@@ -11,19 +11,19 @@
 # Scrivi un programma che chieda due numeri all'utente tramite la funzione input e mostri il più grande tra i due utilizzando la funzione print.
 # Per quanto Python disponga di una funzione max(), siete invitati ad utilizzare le istruzioni istruzioni if, elif ed else per la scrittura dell'algoritmo.
 
-# try:
-#     print("inserisci 2 valori")
-#     num1Exe1 = int(input())
-#     num2Exe1 = int(input())
+try:
+    print("inserisci 2 valori")
+    num1Exe1 = int(input())
+    num2Exe1 = int(input())
     
-#     def numeroMaggiore(int1 , int2):
-#         if int1 > int2:
-#             print(int1)
-#         else:
-#             print(int2)
-#     numeroMaggiore(num1Exe1 , num2Exe1)
-# except:
-#     print("puoi inserire solo numeri interi")
+    def numeroMaggiore(int1 , int2):
+        if int1 > int2:
+            print(int1)
+        else:
+            print(int2)
+    numeroMaggiore(num1Exe1 , num2Exe1)
+except:
+    print("puoi inserire solo numeri interi")
     
 
 
@@ -32,17 +32,17 @@ print("-------------------------------------------------------------------------
 # 🍰 Esercizio 2
 # Scrivi un programma che chieda tre numeri a, b, c all'utente e mostri il più grande tra loro.
 
-# try:
+try:
     
-#     print("inserisci 3 valori")
-#     num1Exe2 = int(input())
-#     num2Exe2 = int(input())
-#     num3Exe2 = int(input())
+    print("inserisci 3 valori")
+    num1Exe2 = int(input())
+    num2Exe2 = int(input())
+    num3Exe2 = int(input())
     
-#     print(max(num1Exe2 , num2Exe2 , num3Exe2))
+    print(max(num1Exe2 , num2Exe2 , num3Exe2))
         
-# except:
-#     print("puoi inserire solo numeri interi")
+except:
+    print("puoi inserire solo numeri interi")
 
 
 
@@ -54,23 +54,23 @@ print("-------------------------------------------------------------------------
 
 userValuesExe3 = []
 
-# try:
-#     print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
-#     while True:
-#         newValueExe3 = int(input())
-#         if newValueExe3 == 0:
-#             break
-#         else:
-#             userValuesExe3.append(newValueExe3)
-# except:
-#     print("puoi inserire solo numeri")
+try:
+    print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
+    while True:
+        newValueExe3 = int(input())
+        if newValueExe3 == 0:
+            break
+        else:
+            userValuesExe3.append(newValueExe3)
+except:
+    print("puoi inserire solo numeri")
     
-# higherValue = 0
-# for num in userValuesExe3:
-#     if num > higherValue:
-#         higherValue = num
+higherValue = 0
+for num in userValuesExe3:
+    if num > higherValue:
+        higherValue = num
 
-# print("il numero più grande è", higherValue)
+print("il numero più grande è", higherValue)
     
     
 
@@ -81,12 +81,12 @@ print("-------------------------------------------------------------------------
 
 vocali = ["a" , "e" , "i" , "o" , "u"]
 
-# print("inserisci una lettera se inserisci una parola verrà presa la prima lettera")
-# str1Exe4 = input()
-# if str1Exe4[0] in vocali:
-#     print("si, è una vocale")
-# else:
-#     print("no, non è una vocale")
+print("inserisci una lettera se inserisci una parola verrà presa la prima lettera")
+str1Exe4 = input()
+if str1Exe4[0] in vocali:
+    print("si, è una vocale")
+else:
+    print("no, non è una vocale")
 
 
 
@@ -99,22 +99,22 @@ print("-------------------------------------------------------------------------
 
 userValuesExe5 = []
 
-# try:
-#     print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
-#     while True:
-#         newValueExe5 = int(input())
-#         if newValueExe5 == 0:
-#             break
-#         else:
-#             userValuesExe5.append(newValueExe5)
-# except:
-#     print("puoi inserire solo numeri")
+try:
+    print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
+    while True:
+        newValueExe5 = int(input())
+        if newValueExe5 == 0:
+            break
+        else:
+            userValuesExe5.append(newValueExe5)
+except:
+    print("puoi inserire solo numeri")
     
-# totalValueExe5 = 0
-# for num in userValuesExe5:
-#     totalValueExe5 += num
+totalValueExe5 = 0
+for num in userValuesExe5:
+    totalValueExe5 += num
 
-# print("il totale è ", totalValueExe5)
+print("il totale è ", totalValueExe5)
 
 
 print("---------------------------------------------------------------------------")
@@ -122,22 +122,22 @@ print("-------------------------------------------------------------------------
 # Scrivi un programma "moltiplicatore" che, data una lista di numeri, moltiplichi tra loro tutti gli elementi.
 userValuesExe6 = []
 
-# try:
-#     print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
-#     while True:
-#         newValueExe6 = int(input())
-#         if newValueExe6 == 0:
-#             break
-#         else:
-#             userValuesExe6.append(newValueExe6)
-# except:
-#     print("puoi inserire solo numeri")
+try:
+    print("inserisci tutti i valori che vuoi inserisci 0 per uscire")
+    while True:
+        newValueExe6 = int(input())
+        if newValueExe6 == 0:
+            break
+        else:
+            userValuesExe6.append(newValueExe6)
+except:
+    print("puoi inserire solo numeri")
     
-# totalValueExe6 = 1
-# for num in userValuesExe6:
-#     totalValueExe6 *= num
+totalValueExe6 = 1
+for num in userValuesExe6:
+    totalValueExe6 *= num
     
-# print("il totale è ", totalValueExe6)
+print("il totale è ", totalValueExe6)
 
 
 
@@ -147,15 +147,15 @@ print("-------------------------------------------------------------------------
 # Scrivi un programma che a partire da un elemento e una lista di elementi dica in output se l'elemento passato sia presente o meno nella lista.
 # Qualora l'elemento sia presente nella lista, il programma dovrà comunicarci l'indice dell'elemento tramite il metodo index.
   
-# try:
-#     val1Exe7 = int(input()) 
-#     valuesExe7 = [8 , 6 , 2512 , 1 , 3 , 42 , 51 , 54367 , 24]
+try:
+    val1Exe7 = int(input("inserisci un numero intero \n")) 
+    valuesExe7 = [8 , 6 , 2512 , 1 , 3 , 42 , 51 , 54367 , 24]
 
-#     for x, val in enumerate(valuesExe7):
-#         if val == val1Exe7:
-#             print(val , "è presente in posizione" , x)
-# except:
-#     print("puoi inserire solo numeri interi")
+    for x, val in enumerate(valuesExe7):
+        if val == val1Exe7:
+            print(val , "è presente in posizione" , x)
+except:
+    print("puoi inserire solo numeri interi")
 
 
     
@@ -184,13 +184,13 @@ print("-------------------------------------------------------------------------
 # Scrivi una funzione che restituisca la lunghezza di una stringa o lista passata come parametro. 
 # In sostanza, seppur presente, provate a scrivere la nostra versione della funzione len!
 
-# str1Exe9 = input()
-# strLengthExe4 = 0
+str1Exe9 = input("inserisci una frase \n")
+strLengthExe4 = 0
 
-# for letter in str1Exe4:
-#     strLengthExe4 += 1
+for letter in str1Exe4:
+    strLengthExe4 += 1
     
-# print(strLengthExe4)
+print(strLengthExe4)
     
 
 
@@ -214,16 +214,16 @@ print("-------------------------------------------------------------------------
 # Scrivi una funzione che, data una stringa come parametro, restituisca un dizionario rappresentante la "frequenza di comparsa" di ciascun carattere componente la stringa.
 # Per fare un esempio, data una stringa "ababcc", otterremo in risultato {"a": 2, "b": 2, "c": 2}
 
-# str1Exe11 = input()
-# dict1Exe11 = {}
+str1Exe11 = input()
+dict1Exe11 = {}
 
-# for letter in str1Exe11:
-#     if letter in dict1Exe11:
-#         dict1Exe11[letter] += 1
-#     else:
-#         dict1Exe11[letter] = 1
+for letter in str1Exe11:
+    if letter in dict1Exe11:
+        dict1Exe11[letter] += 1
+    else:
+        dict1Exe11[letter] = 1
 
-# print(dict1Exe11)
+print(dict1Exe11)
     
 
 print("---------------------------------------------------------------------------")
@@ -231,15 +231,15 @@ print("-------------------------------------------------------------------------
 # Scrivi una funzione che, dato in ingresso un valore espresso in metri, 
 # mandi in print l'equivalente in miglia terrestri, iarde, piedi e pollici. Come risolverai questo esercizio?
 
-# try:
-#     print("inserire un valore in metri")
-#     num1Exe12 = int(input())
-#     print(num1Exe12, "metri equivale a :" , num1Exe12 / 1609 ,"miglia terrestri")
-#     print(num1Exe12, "metri equivale a :" , num1Exe12 * 1.094 ,"iarde")
-#     print(num1Exe12, "metri equivale a :" , num1Exe12 * 3.281 ,"piedi")
-#     print(num1Exe12, "metri equivale a :" , num1Exe12 * 39,37 ,"miglia terrestri")
-# except:
-#     print("puoi inserire solo numeri interi")
+try:
+    print("inserire un valore in metri")
+    num1Exe12 = int(input())
+    print(num1Exe12, "metri equivale a :" , num1Exe12 / 1609 ,"miglia terrestri")
+    print(num1Exe12, "metri equivale a :" , num1Exe12 * 1.094 ,"iarde")
+    print(num1Exe12, "metri equivale a :" , num1Exe12 * 3.281 ,"piedi")
+    print(num1Exe12, "metri equivale a :" , num1Exe12 * 39,37 ,"miglia terrestri")
+except:
+    print("puoi inserire solo numeri interi")
 
 
 
@@ -248,22 +248,22 @@ print("-------------------------------------------------------------------------
 # 🍰 Esercizio 13
 # Scrivi una semplice funzione che converta un dato numero di giorni, ore e minuti, passati dall'utente tramite funzione input, in secondi.
 
-# try: 
-#     print("inserire numero giorni")
-#     daysExe13 = int(input())
-#     print("inserire numero di ore")
-#     hoursExe13 = int(input())
-#     print("inserire numero minuti")
-#     minutsExe13 = int(input())
+try: 
+    print("inserire numero giorni")
+    daysExe13 = int(input())
+    print("inserire numero di ore")
+    hoursExe13 = int(input())
+    print("inserire numero minuti")
+    minutsExe13 = int(input())
     
-#     totalSecondExe13 = 0
-#     totalSecondExe13 += (daysExe13 * 86400)
-#     totalSecondExe13 += (hoursExe13 * 3600)
-#     totalSecondExe13 += (minutsExe13 * 60)
-#     print("numero totale di secondi :",totalSecondExe13)
+    totalSecondExe13 = 0
+    totalSecondExe13 += (daysExe13 * 86400)
+    totalSecondExe13 += (hoursExe13 * 3600)
+    totalSecondExe13 += (minutsExe13 * 60)
+    print("numero totale di secondi :",totalSecondExe13)
     
-# except:
-#     print("puoi inserire solo numeri interi")
+except:
+    print("puoi inserire solo numeri interi")
     
 
 print("---------------------------------------------------------------------------")
@@ -278,30 +278,30 @@ print("-------------------------------------------------------------------------
 
 
 import math 
-# try:
-#     print("inserire tipo di forma 1 per il cerchio |2 per triangolo | 3 per quadrato | 4 per rettangolo")
-#     typeForm = input()
-#     if typeForm == "1":
-#         print("inserire raggio ")
-#         baseForm = int(input())
-#     elif typeForm == "2" or typeForm == "3" or typeForm == "4":
-#         print("inserire base")
-#         baseForm = int(input())
-#         print("inserire altezza")
-#         heightForm = int(input())
+try:
+    print("inserire tipo di forma 1 per il cerchio |2 per triangolo | 3 per quadrato | 4 per rettangolo")
+    typeForm = input()
+    if typeForm == "1":
+        print("inserire raggio ")
+        baseForm = int(input())
+    elif typeForm == "2" or typeForm == "3" or typeForm == "4":
+        print("inserire base")
+        baseForm = int(input())
+        print("inserire altezza")
+        heightForm = int(input())
         
-#     if typeForm == "1":
-#         print("l'area del cerchio è :", math.pi * pow(baseForm , 2))  
-#     elif typeForm == "2":
-#         print("l'area del triangolo è :", baseForm * heightForm / 2)    
-#     elif typeForm == "3" or typeForm == "4":
-#         print("l'area è :", baseForm * heightForm) 
-#     else:
-#         print("forma non trovata")   
+    if typeForm == "1":
+        print("l'area del cerchio è :", math.pi * pow(baseForm , 2))  
+    elif typeForm == "2":
+        print("l'area del triangolo è :", baseForm * heightForm / 2)    
+    elif typeForm == "3" or typeForm == "4":
+        print("l'area è :", baseForm * heightForm) 
+    else:
+        print("forma non trovata")   
         
     
-# except:
-#     print("hai inserito un valore non valido")
+except:
+    print("hai inserito un valore non valido")
 
 
 
@@ -356,13 +356,13 @@ print("-------------------------------------------------------------------------
 # Scrivi una funzione che, dato un carattere in ingresso, restituisca in output il codice ASCII associato al carattere passato.
 # Anche in questo caso, usare una libreria potrebbe facilitare la risoluzione dell'esercizio!
 
-# charExe17 = input("inserire un carattere:")
+charExe17 = input("inserire un carattere:")
 
-# def foundASCII(str):
-#     asciiCode = ord(str[0])
-#     return asciiCode
+def foundASCII(str):
+    asciiCode = ord(str[0])
+    return asciiCode
 
-# print(foundASCII(charExe17))
+print(foundASCII(charExe17))
 
 
 print("---------------------------------------------------------------------------")
@@ -370,15 +370,15 @@ print("-------------------------------------------------------------------------
 # Un numero perfetto è un numero naturale uguale alla somma dei suoi divisori positivi, 
 # escluso sé stesso. Scrivi una funzione che verifichi se un numero è perfetto oppure no.
 
-# num1Exe18=int(input("Enter the number: "))  
-# sumExe18=0  
-# for i in range(1,num1Exe18):  
-#     if (num1Exe18%i==0):  
-#         sumExe18=sumExe18+i  
-# if(sumExe18==num1Exe18):  
-#     print("il numero inserito è perfetto")  
-# else:  
-#     print("il numero inserito non è perfetto")  
+num1Exe18=int(input("Enter the number: "))  
+sumExe18=0  
+for i in range(1,num1Exe18):  
+    if (num1Exe18%i==0):  
+        sumExe18=sumExe18+i  
+if(sumExe18==num1Exe18):  
+    print("il numero inserito è perfetto")  
+else:  
+    print("il numero inserito non è perfetto")  
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 19
@@ -386,16 +386,16 @@ print("-------------------------------------------------------------------------
 # Il programma deve poi chiedere all'utente di inserire una lettera e mostrare in output solo i colori nella lista che iniziano con quella lettera.
 # Suggerimento: potresti usare la funzione range e il metodo startswith().
 
-# colorListExe19 = []
+colorListExe19 = []
 
-# for i in range(0,11): 
-#     if i >= 10:
-#         charExe19 = input("inserisci una lettera:")
-#         for color in colorListExe19:
-#             if color.startswith(charExe19[0]):
-#                 print(color)
-#         break
-#     colorListExe19.append(input('inserisci il colore numero ' + str(i + 1)))
+for i in range(0,11): 
+    if i >= 10:
+        charExe19 = input("inserisci una lettera:")
+        for color in colorListExe19:
+            if color.startswith(charExe19[0]):
+                print(color)
+        break
+    colorListExe19.append(input('inserisci il colore numero ' + str(i + 1)))
      
     
 
@@ -405,15 +405,15 @@ print("-------------------------------------------------------------------------
 # un ciclo while e li stampi con la funzione print senza andare a capo. 
 # Il ciclo while si deve interrompere quando l'utente preme INVIO senza scrivere nulla.
 
-# str1Exe20 = ""
+str1Exe20 = ""
 
-# while True:
-#     inputExe20 = input("inserire qualcosa")
-#     if inputExe20 == "":
-#         break
-#     str1Exe20 += inputExe20
+while True:
+    inputExe20 = input("inserire qualcosa")
+    if inputExe20 == "":
+        break
+    str1Exe20 += inputExe20
 
-# print(str1Exe20)
+print(str1Exe20)
 
 
 
@@ -423,28 +423,28 @@ print("-------------------------------------------------------------------------
 # Ogni dizionario rappresenta uno studente e contiene nome, cognome, classe e voti. 
 # La funzione deve stampare un elenco di tutti gli studenti e calcolare la media dei voti di ciascuno.
 
-# dictListExe21 = [
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":2 , "matematica": 7 , "classe" : "A1"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 9, "italiano":6 , "matematica": 9 , "classe" : "B1"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 1, "italiano":2 , "matematica": 7 , "classe" : "B1"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 0, "italiano":2 , "matematica": 2 , "classe" : "B2"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 5, "italiano":2 , "matematica": 1 , "classe" : "B2"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 2, "italiano":1 , "matematica": 7 , "classe" : "A3"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":10 , "matematica": 9 , "classe" : "B3"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 4, "italiano":4 , "matematica": 4 , "classe" : "C1"},
-#     {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":8 , "matematica": 8 , "classe" : "C1"},
-#     ]
+dictListExe21 = [
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":2 , "matematica": 7 , "classe" : "A1"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 9, "italiano":6 , "matematica": 9 , "classe" : "B1"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 1, "italiano":2 , "matematica": 7 , "classe" : "B1"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 0, "italiano":2 , "matematica": 2 , "classe" : "B2"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 5, "italiano":2 , "matematica": 1 , "classe" : "B2"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 2, "italiano":1 , "matematica": 7 , "classe" : "A3"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":10 , "matematica": 9 , "classe" : "B3"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 4, "italiano":4 , "matematica": 4 , "classe" : "C1"},
+    {"nome": "mario" , "cognome":"rossi" , "storia" : 8, "italiano":8 , "matematica": 8 , "classe" : "C1"},
+    ]
 
 
-# def calcolaMediaTutti(arr):
-#     for i in range(0 , len(arr)):
-#         print("nome:", arr[i]["nome"])
-#         print("cognome:",arr[i]["cognome"])
-#         print("classe:",arr[i]["classe"])
-#         totVotiExe21 = arr[i]["storia"] + arr[i]["italiano"] + arr[i]["matematica"]
-#         print("media:", (totVotiExe21/3))
+def calcolaMediaTutti(arr):
+    for i in range(0 , len(arr)):
+        print("nome:", arr[i]["nome"])
+        print("cognome:",arr[i]["cognome"])
+        print("classe:",arr[i]["classe"])
+        totVotiExe21 = arr[i]["storia"] + arr[i]["italiano"] + arr[i]["matematica"]
+        print("media:", (totVotiExe21/3))
 
-# calcolaMediaTutti(dictListExe21)
+calcolaMediaTutti(dictListExe21)
 
 
 
@@ -492,13 +492,83 @@ leggiFileCsv('utenti.csv')
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 23
-# Scrivi una funzione che permetta di inserire una canzone e salvarla in un file di testo. Il programma deve chiedere all'utente di inserire il titolo e il testo della canzone, e poi salvare quest'ultimo in un file intitolato titolo_canzone.txt.
+# Scrivi una funzione che permetta di inserire una canzone e salvarla in un file di testo. 
+# Il programma deve chiedere all'utente di inserire il titolo e il testo della canzone, e poi salvare quest'ultimo in un 
+# file intitolato titolo_canzone.txt.
 # Suggerimento: dovrai utilizzare l'istruzione with.
+
+
+def creaFileCanzone(titolo, testo, nome_file):
+    with open(nome_file, 'w') as f:
+        f.write(titolo + "\n")
+        f.write(testo)
+       
+titleExe23 = input("inserire titolo canzone")            
+
+songTextExe23 = ""
+
+while True:
+    inputExe23 = input("inserire testo , digitare enter senza nulla per uscire")
+    if inputExe23 == "":
+        break
+    songTextExe23 += (inputExe23 + " \n")
+
+creaFileCanzone(titleExe23 , songTextExe23 , (titleExe23 + ".txt"))
+
+
+
+
 
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 24
-# Scrivi una funzione che crei una tupla contenente i nomi dei pianeti del sistema solare, la loro tipologia (gassoso o roccioso) e il numero di satelliti naturali conosciuti. Il programma deve quindi stampare a schermo il contenuto della tupla e il numero totale di satelliti.
+# Scrivi una funzione che crei una tupla contenente i nomi dei pianeti del sistema solare, 
+# la loro tipologia (gassoso o roccioso) e il numero di satelliti naturali conosciuti. Il programma deve quindi stampare 
+# a schermo il contenuto della tupla e il numero totale di satelliti.
+
+pianeti = (
+    ("Mercurio", "roccioso", 0),
+    ("Venere", "roccioso", 0),
+    ("Terra", "roccioso", 1),
+    ("Marte", "roccioso", 2),
+    ("Giove", "gassoso", 95),
+    ("Saturno", "gassoso", 83),
+    ("Urano", "gassoso", 27),
+    ("Nettuno", "gassoso", 14)
+)
+
+totalSatelite = 0
+
+for pianeta in pianeti:
+    print(f"{pianeta[0]}: {pianeta[1]}, {pianeta[2]} satelliti")
+    totalSatelite += pianeta[2]
+
+print("il numero totale di satelliti è :",totalSatelite)
+        
+
+
+
+
+
 print("---------------------------------------------------------------------------")
 # 🍰 Esercizio 25
-# Scrivi una funzione che prenda come argomento un set di sport preferiti dall'utente e stampi un messaggio di testo che indica se si tratta di uno sport di squadra o individuale.
+# Scrivi una funzione che prenda come argomento un set di sport preferiti dall'utente e 
+# stampi un messaggio di testo che indica se si tratta di uno sport di squadra o individuale.
 # Suggerimento: per valutare la stringa inserita potrebbe essere utile utilizzare il metodo lower.
+
+
+sport_squadra = {"calcio", "basket", "volley", "hockey su ghiaccio", "rugby", "football", "curling"}
+sport_individuale = {"tennis", "golf", "pugilato", "atletica", "surf", "nuoto", "ciclismo", "judo"}
+
+
+
+def identificaSport(str):
+    if str in sport_squadra:
+        print(str , "è uno sport di squadra")
+    elif str in sport_individuale:
+        print(str , "è uno sport individuale")
+    else:
+        print("non conosco", str)
+
+
+sportUtente = input("inserisci uno sport \n")
+identificaSport(sportUtente.lower())
