@@ -103,6 +103,23 @@ print("---------------------------------------------")
 # alla ricerca di rime, intese come parole le cui ultime 3 lettere siano uguali alla parola inserita dall'utente.
 # Le rime dovranno essere quindi mostrate in output utilizzando il metodo join.
 
+parole = ["rose" , "fiori" , "autobus" , "arancione" , "pose" , "cose" , "amore" , "stazione" ]
+
+word1Exe5 = input("scrivi una parola")
+
+
+def makeARime(str):
+    for word in parole:
+        if str[-3:-1] == word[-3:-1]:
+            print(word)
+
+makeARime(word1Exe5)
+
+
+
+
+
+
 
 
 print("---------------------------------------------")
@@ -110,21 +127,52 @@ print("---------------------------------------------")
 # Esercizio 006
 # La Libreria
 # Scrivi una funzione vendi_libri(), che aiuti nella gestione della vendita di libri in una libreria:
-
 # Controlla se il libro richiesto è presente sugli scaffali della libreria
-# Qualora il libro sia presente, ne decrementa il numero di copie (eventualmente rimuovendo il titolo) e ci segnala che la vendita ha avuto successo
+# Qualora il libro sia presente, ne decrementa il numero di copie (eventualmente rimuovendo il titolo) 
+# e ci segnala che la vendita ha avuto successo
 # Se il libro non è disponibile, viene messo in un elenco di libri da ordinare e ci viene comunicato che la vendita non ha avuto successo
 # La funzione deve restituire valore booleanoTrue o False in base all'esito della vendita.
 
+deposito = {"libro 1" : 4 , "libro 2" : 0 , "libro 3" : 1}
+daAcquistare = {}
+
+
+def vendi_libri():
+    while True:
+        inputExe8 = input("che libro vuoi comprare? libro 1 , libro 2 , libro 3\n")
+        if inputExe8 == "":
+            break
+        if deposito[inputExe8] > 0:
+            deposito[inputExe8] -= 1
+            print("l'acquisto è avvenuto con successo")
+            return True
+        else:
+            print("il libro non è presente in deposito")
+            if inputExe8 is daAcquistare:
+                daAcquistare[inputExe8] += 1
+                return False
+            else:
+                daAcquistare[inputExe8] = 1
+                return False
+
+
+vendi_libri()
 
 
 print("---------------------------------------------")
 
 # Esercizio 007
 # Crittografia ROT-13
-# Il ROT-13 è un semplice cifrario monoalfabetico, in cui ogni lettera del messaggio da cifrare viene sostituita con quella posta 13 posizioni più avanti nell'alfabeto.
+# Il ROT-13 è un semplice cifrario monoalfabetico, in cui ogni lettera del messaggio da cifrare 
+# viene sostituita con quella posta 13 posizioni più avanti nell'alfabeto.
+# Scrivi una semplice funzione in grado di criptare una stringa passata, 
+# o decriptarla se la stringa è già stata precedentemente codificata.
 
-# Scrivi una semplice funzione in grado di criptare una stringa passata, o decriptarla se la stringa è già stata precedentemente codificata.
+
+
+
+
+                                                                                       
 
 
 
