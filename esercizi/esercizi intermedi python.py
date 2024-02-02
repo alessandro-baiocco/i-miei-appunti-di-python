@@ -73,7 +73,7 @@ print("---------------------------------------------")
 # l'utente voglia una password semplice, e di 20 caratteri ASCII qualora desideri una password più complicata.
 import random, string
 from random import randint
-choiseExe4 = input("che tipo di password vuoi 1| per una password semplice 2| per una complessa")
+choiseExe4 = input("che tipo di password vuoi 1| per una password semplice 2| per una complessa\n")
 
 passWord = ""
 
@@ -105,7 +105,7 @@ print("---------------------------------------------")
 
 parole = ["rose" , "fiori" , "autobus" , "arancione" , "pose" , "cose" , "amore" , "stazione" ]
 
-word1Exe5 = input("scrivi una parola")
+word1Exe5 = input("scrivi una parola\n")
 
 
 def makeARime(str):
@@ -168,7 +168,34 @@ print("---------------------------------------------")
 # Scrivi una semplice funzione in grado di criptare una stringa passata, 
 # o decriptarla se la stringa è già stata precedentemente codificata.
 
+alfabeto = ["a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" ,"n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" ,"w", "x" , "y" , "z" ]
 
+
+while True:
+    input1Exe7 = input("inserire la parola da cifrare o decifrare\n")
+    input2Exe7 = input("1| cifrare o 2| decifrare \n")
+    newWord = ""
+    if input1Exe7 == "":
+        break
+    if input2Exe7 == "1":
+        for letter in input1Exe7:
+            index = alfabeto.index(letter)
+            if index >= 13:
+                newWord += alfabeto[index - 13]
+            else:
+                newWord += alfabeto[index + 13]
+        print("newWord")
+    elif input2Exe7 == "2":
+        for letter in input1Exe7:
+            index = alfabeto.index(letter)
+            if index < 13:
+                newWord += alfabeto[index + 13]
+            else:
+                newWord += alfabeto[index - 13]
+    print(newWord)
+            
+            
+        
 
 
 
@@ -180,8 +207,26 @@ print("---------------------------------------------")
 
 # Esercizio 008
 # Il Peso di una Cartella
-# Scrivi una funzione che calcoli la somma (espressa in MB) delle dimensioni dei file presenti nella cartella di lavoro utilizzando il modulo os.
+# Scrivi una funzione che calcoli la somma (espressa in MB) delle dimensioni dei file presenti 
+# nella cartella di lavoro utilizzando il modulo os.
 
+
+import os
+
+
+input1Exe8 = input("inserire un percorso\n")
+
+def get_size(start_path = '.'):
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(start_path):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            if not os.path.islink(fp):
+                total_size += os.path.getsize(fp)
+
+    return total_size / 1000000
+
+print(get_size(input1Exe8), 'Mb')
 
 
 print("---------------------------------------------")
@@ -189,22 +234,48 @@ print("---------------------------------------------")
 # Esercizio 009
 # Il Postino
 # Scrivi una funzione "postino" che sia in grado di spedire delle eMail tramite Gmail.
-
 # Suggerimento: puoi usare il modulo smtplib.
+import smtplib
+from dotenv import load_dotenv
+load_dotenv()
 
+
+
+# def sendMail():
+#     oggetto = input("inserire oggetto mail\n")
+#     contenuto = input("inserire messaggio mail\n")
+#     messaggio = oggetto + contenuto
+#     email = smtplib.SMTP("smtp.gmail.com" , 587)
+#     email.ehlo()
+#     email.starttls()
+#     email.login(os.getenv("MY_MAIL"), os.getenv("MY_PASS_MAIL"))
+#     email.sendmail(os.getenv("MY_MAIL"), os.getenv("MY_MAIL"), messaggio)
+#     email.quit()
+    
+# sendMail()
 
 
 print("---------------------------------------------")
 
 # Esercizio 010
 # La Cercatrice
-# Scrivi una funzione "cercatrice" che scansioni un dato percorso di sistema alla ricerca di file di tipo pdf tramite il modulo os. La funzione dovrà avere le seguenti caratteristiche:
+# Scrivi una funzione "cercatrice" che scansioni un dato percorso di sistema alla ricerca di file di tipo pdf tramite il modulo os. 
+# La funzione dovrà avere le seguenti caratteristiche:
 # Il percorso fornito dovrà essere anzitutto validato, in quanto deve portare a una cartella esistente
 # La funzione dovrà fornire un elenco dei file pdf (con/relativo/percorso) man mano che questi vengono trovati
 # In fine la funzione dovrà fornire in output il totale dei file .pdf che sono stati trovati durante la scansione.
 
 
+input1Exe10 = input("inserire un percorso\n")
 
+def get_pdfs(start_path = '.'):
+    for dirpath, dirnames, filenames in os.walk(start_path):
+        for f in filenames:
+            if ".pdf" in f:
+                print(os.path.join(dirpath, f))
+                
+                
+get_pdfs(input1Exe10)
 
 
 print("---------------------------------------------")
@@ -212,19 +283,60 @@ print("---------------------------------------------")
 # Esercizio 011
 # Il Salvatore
 # Scrivi una funzione "file_backup" che sia in grado di effettuare copie di backup di determinati tipi di file, con le seguenti caratteristiche:
-
 # Percorso da scansionare, di backup e tipologia di file da copiare dovranno essere passati dall'utente tramite input
-# Il programma dovrà verificare la presenza o meno di una cartella di backup al percorso fornito, e qualora questa non fosse presente dovrà crearla
+# Il programma dovrà verificare la presenza o meno di una cartella di backup al percorso fornito, 
+# e qualora questa non fosse presente dovrà crearla
 # La funzione dovrà anche gestire l'eventuale scelta da parte dell'utente, di un percorso da scansionare che non esiste
 # Suggerimento: potresti importare i moduli os e shutil.
 
+import shutil
 
+def file_backup():
+    percorso = input("Inserisci il percorso : ")
+    if not os.path.isdir(percorso):
+        print(f"Il percorso inserito '{percorso}' risulta non essere un percorso idoneo. Verifica e riprova, grazie.\n")
+        return file_backup()
+    estensione = input("Che tipologia di file desideri salvare? [esempio: .jpg .pdf .epub]:\n ")
+    backup_folder = input("Inserisci la cartella dove desideri salvare i tuoi file:\n ")
+    if not os.path.isdir(backup_folder):
+      	 os.makedirs(backup_folder)
+    contatore = 0
+    print(f"Sto effettuando la scansione di '{percorso}' alla ricerca di file '{estensione}'\n")
+    for dirpath, dirnames, filenames in os.walk(percorso):
+        for f in filenames:
+            if f.endswith(estensione):
+                match = os.path.join(dirpath,f)
+                print(f"Trovato file {estensione}: {match}")
+                shutil.copy(match,backup_folder)
+                contatore += 1
+    print("Copia Terminata")
+    print(f"Ho trovato '{contatore}' files con estensione {estensione}, ora disponibili anche in '{backup_folder}'")
+
+# file_backup()
 
 print("---------------------------------------------")
 
 # Esercizio 012
 # Funzione Fattoriale Ricorsiva
 # Scrivi una funzione ricorsiva che calcola il fattoriale di un numero dato.
+try:
+    def calcola_fattoriale():
+        input1Exe12 = int(input("inserisci un numero\n"))
+        fattoriale = 1
+        for n in range(1 , input1Exe12 + 1):
+            fattoriale *= n
+        return fattoriale
+except:
+    print("inserisci un numero intero")
+    calcola_fattoriale()
+    
+    
+print(calcola_fattoriale())
+    
+
+        
+
+    
 
 
 
@@ -233,10 +345,28 @@ print("---------------------------------------------")
 # Esercizio 013
 # La Successione di Fibonacci
 # Nella Successione di Fibonacci, ciascun numero è la somma dei due numeri che lo precedono, ad esempio:
-
 # 1, 1, 2, 3, 5, 8, 13 (...)
+# Scrivi una funzione ricorsiva che restituisce in output i numeri della successione di Fibonacci, 
+# entro una soglia specifica impostata dall'utente.
 
-# Scrivi una funzione ricorsiva che restituisce in output i numeri della successione di Fibonacci, entro una soglia specifica impostata dall'utente.
+try:
+    def fibonacci(n):
+        if n <= 1:
+            return n
+        else:
+            return (fibonacci(n-1) + fibonacci(n-2))
+        
+    
+    input1Exe13 = int(input("Inserisci la lungezza della serie che desideri vedere\n"))
+    serieFibonacci = ""
+
+    for num in range(1, input1Exe13+1):
+        serieFibonacci += str(fibonacci(num)) + "|"
+
+    print(serieFibonacci)
+except:
+    print("inserisci un valore intero")    
+    
 
 
 
@@ -244,6 +374,10 @@ print("---------------------------------------------")
 
 # Esercizio 014
 # Il Cifrario di Cesare
-# Il Cifrario di Cesare è un algoritmo di crittografia che consiste nello spostare ciascuna lettera di una certa quantità di posti nell'alfabeto. Per utilizzarlo, si sceglie una chiave che rappresenta il numero di posti di cui ogni lettera dell'alfabeto verrà spostata: ad esempio, se si sceglie una chiave di 3, la lettera A diventerà D, la lettera B diventerà E e così via. Per decifrare un messaggio cifrato con il cifrario di Cesare bisogna conoscere la chiave utilizzata e spostare ogni lettera indietro di un numero di posti corrispondente alla chiave.
-
+# Il Cifrario di Cesare è un algoritmo di crittografia che consiste nello spostare ciascuna lettera di una certa quantità di posti nell'alfabeto. 
+# Per utilizzarlo, si sceglie una chiave che rappresenta il numero di posti di cui ogni lettera dell'alfabeto verrà spostata: 
+# ad esempio, se si sceglie una chiave di 3, la lettera A diventerà D, la lettera B diventerà E e così via. Per decifrare un messaggio cifrato 
+# con il cifrario di Cesare bisogna conoscere la chiave utilizzata e spostare ogni lettera indietro di un 
+# numero di posti corrispondente alla chiave.
 # Scrivi una funzione che riceva come argomento una stringa e un numero e applichi il Cifrario di Cesare alla stringa spostandosi nell'alfabeto di tante posizioni quante dice il numero.
+
